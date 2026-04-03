@@ -1,0 +1,95 @@
+.projects {
+  background: #0d1117;
+  padding: 60px 80px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.proj-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  transition: border-color 0.2s;
+  cursor: default;
+}
+.proj-card.accent:hover {
+  border-color: #4ec9b0;
+}
+.proj-card.purple:hover {
+  border-color: #c792ea;
+}
+.proj-card.blue:hover {
+  border-color: #82aaff;
+}
+.proj-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+.proj-icon {
+  font-family: "Fira Code", monospace;
+  font-size: 22px;
+  color: #4ec9b0;
+}
+.proj-icon.purple {
+  color: #c792ea;
+}
+.proj-icon.blue {
+  color: #82aaff;
+}
+.proj-status {
+  font-family: "Fira Code", monospace;
+  font-size: 10px;
+  padding: 3px 8px;
+  border-radius: 3px;
+}
+.proj-status.live {
+  color: #4ec9b0;
+  border: 1px solid #4ec9b0;
+}
+.proj-status.wip {
+  color: #ffcb6b;
+  border: 1px solid #ffcb6b;
+}
+.proj-name {
+  font-size: 20px;
+  font-weight: 600;
+  color: #e6edf3;
+}
+.proj-company {
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  color: #637777;
+  margin-top: 4px;
+}
+.proj-desc {
+  font-size: 15px;
+  color: #8b949e;
+  line-height: 1.7;
+  margin-top: auto;
+}
+.proj-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+.proj-tag {
+  font-family: "Fira Code", monospace;
+  font-size: 10px;
+  padding: 3px 10px;
+  border-radius: 3px;
+  border: 1px solid #21262d;
+  color: #637777;
+}

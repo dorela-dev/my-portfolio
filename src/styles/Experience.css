@@ -1,0 +1,167 @@
+.experience {
+  background: #0d1117;
+  padding: 60px 80px;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+.h-timeline {
+  position: relative;
+  padding-bottom: 40px;
+}
+.h-line {
+  position: absolute;
+  top: 18px;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: #21262d;
+  z-index: 0;
+}
+.h-track {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 16px;
+  position: relative;
+  z-index: 1;
+}
+.h-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.h-dot-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 16px;
+}
+.h-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #0d1117;
+  flex-shrink: 0;
+  z-index: 2;
+}
+.h-dot.accent {
+  background: #4ec9b0;
+}
+.h-dot.purple {
+  background: #c792ea;
+}
+.h-dot.blue {
+  background: #82aaff;
+}
+
+.h-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 16px;
+  width: 100%;
+  transition: border-color 0.2s;
+}
+.h-card.accent:hover {
+  border-color: #4ec9b0;
+}
+.h-card.purple:hover {
+  border-color: #c792ea;
+}
+.h-card.blue:hover {
+  border-color: #82aaff;
+}
+
+.h-date {
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
+  color: #637777;
+  margin-bottom: 8px;
+}
+
+.h-company {
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+.h-role {
+  font-size: 17px;
+  font-weight: 600;
+  color: #e6edf3;
+  line-height: 1.4;
+}
+.h-company.accent {
+  color: #4ec9b0;
+}
+.h-company.purple {
+  color: #c792ea;
+}
+.h-company.blue {
+  color: #82aaff;
+}
+
+.h-bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.h-bullets li {
+  font-size: 11px;
+  color: #8b949e;
+  display: flex;
+  gap: 6px;
+  line-height: 1.5;
+  align-items: flex-start;
+}
+.h-bullets li::before {
+  content: "▸";
+  color: #4ec9b0;
+  flex-shrink: 0;
+  font-size: 9px;
+  margin-top: 2px;
+}
+
+.edu-section {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid #21262d;
+}
+.edu-label {
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  color: #c792ea;
+  margin-bottom: 14px;
+}
+.edu-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 18px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.edu-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e6edf3;
+}
+.edu-sub {
+  font-family: "Fira Code", monospace;
+  font-size: 10px;
+  color: #637777;
+  margin-top: 4px;
+}
+.edu-date {
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
+  color: #4ec9b0;
+  white-space: nowrap;
+  margin-left: 16px;
+}

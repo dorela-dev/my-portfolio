@@ -1,0 +1,133 @@
+.skills {
+  background: #0d1117;
+  padding: 60px 80px;
+  font-family: "Inter", sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  scroll-snap-align: start;
+}
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.skill-group {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 24px;
+}
+.span-full {
+  grid-column: span 3;
+}
+.group-title {
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.group-title::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.group-title.accent {
+  color: #4ec9b0;
+}
+.group-title.accent::before {
+  background: #4ec9b0;
+}
+.group-title.blue {
+  color: #82aaff;
+}
+.group-title.blue::before {
+  background: #82aaff;
+}
+.group-title.purple {
+  color: #c792ea;
+}
+.group-title.purple::before {
+  background: #c792ea;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.tag {
+  font-family: "Fira Code", monospace;
+  font-size: 13px;
+  padding: 5px 12px;
+  border-radius: 4px;
+  border: 1px solid #21262d;
+  color: #8b949e;
+  background: #0d1117;
+  transition: all 0.2s;
+  cursor: default;
+}
+.tag:hover {
+  border-color: #4ec9b0;
+  color: #4ec9b0;
+}
+.tag.accent {
+  border-color: #4ec9b0;
+  color: #4ec9b0;
+}
+.tag.blue {
+  border-color: #82aaff;
+  color: #82aaff;
+}
+.tag.purple {
+  border-color: #c792ea;
+  color: #c792ea;
+}
+.lang-level {
+  color: #637777;
+  margin-left: 4px;
+}
+
+.certs-label {
+  font-family: "Fira Code", monospace;
+  font-size: 12px;
+  color: #c792ea;
+  margin-top: 32px;
+  margin-bottom: 16px;
+}
+.certs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+.cert-card {
+  background: #161b22;
+  border: 1px solid #21262d;
+  border-radius: 8px;
+  padding: 20px;
+  display: flex;
+  gap: 14px;
+  align-items: flex-start;
+}
+.cert-icon {
+  font-family: "Fira Code", monospace;
+  font-size: 18px;
+  color: #ffcb6b;
+  flex-shrink: 0;
+}
+.cert-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: #e6edf3;
+  margin-bottom: 4px;
+}
+.cert-issuer {
+  font-family: "Fira Code", monospace;
+  font-size: 11px;
+  color: #637777;
+}

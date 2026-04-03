@@ -1,0 +1,59 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 48px;
+  height: 64px;
+  background: #0d1117;
+  border-bottom: 1px solid #21262d;
+  z-index: 100;
+  transition: border-color 0.3s;
+  font-family: "Fira Code", monospace;
+}
+.navbar.scrolled {
+  border-bottom-color: #30363d;
+}
+.nav-logo {
+  font-size: 15px;
+  color: #4ec9b0;
+}
+.nav-logo span {
+  color: #c792ea;
+}
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+.nav-links a {
+  font-size: 12px;
+  color: #637777;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.nav-links a:hover {
+  color: #4ec9b0;
+}
+.nav-links .num {
+  color: #c792ea;
+  margin-right: 4px;
+}
+.nav-resume {
+  font-size: 12px;
+  color: #4ec9b0;
+  border: 1px solid #4ec9b0;
+  padding: 6px 14px;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background 0.2s;
+}
+.nav-resume:hover {
+  background: rgba(78, 201, 176, 0.1);
+}
+.nav-links a.active {
+  color: #4ec9b0;
+}
