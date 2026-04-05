@@ -1,11 +1,15 @@
 .experience {
-  background: #0d1117;
+  background: transparent;
   padding: 60px 80px;
   font-family: "Inter", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative; /* ADD THIS */
+  z-index: 1;
+  height: 100vh;
+  overflow-y: auto;
   scroll-snap-align: start;
 }
 .h-timeline {

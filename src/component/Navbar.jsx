@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import useTheme from "../hooks/useTheme";
 import "../styles/Navbar.css";
 
 const links = ["about", "skills", "experience", "projects", "contact"];
@@ -6,6 +7,7 @@ const links = ["about", "skills", "experience", "projects", "contact"];
 export default function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState("");
+  const { theme, toggle } = useTheme();
 
   useEffect(() => {
     const onScroll = () => {
@@ -23,25 +25,28 @@ export default function Navbar() {
   }, []);
 
   return (
-    <>
-      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
-        <a href="#hero" className="nav-logo">
-          <span>dorela</span>.dev
-        </a>
-        <ul className="nav-links">
-          {links.map((link, i) => (
-            <li key={link}>
-              <a href={`#${link}`} className={active === link ? "active" : ""}>
-                <span className="num">0{i + 1}.</span>
-                {link}
-              </a>
-            </li>
-          ))}
-        </ul>
+    <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <a href="#hero" className="nav-logo">
+        <span>dorela</span>.dev
+      </a>
+      <ul className="nav-links">
+        {links.map((link, i) => (
+          <li key={link}>
+            <a href={`#${link}`} className={active === link ? "active" : ""}>
+              <span className="num">0{i + 1}.</span>
+              {link}
+            </a>
+          </li>
+        ))}
+      </ul>
+      <div className="nav-right">
+        <button className="theme-toggle" onClick={toggle} title="toggle theme">
+          {theme === "dark" ? "[ light_mode ]" : "[ dark_mode ]"}
+        </button>
         <a href="/resume.pdf" target="_blank" className="nav-resume">
           resume.pdf
         </a>
-      </nav>
-    </>
+      </div>
+    </nav>
   );
 }

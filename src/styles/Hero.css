@@ -2,47 +2,17 @@
 
 .hero {
   min-height: 100vh;
-  background: #0d1117;
+  background: var(--bg);
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 100px 80px 40px;
   gap: 60px;
   width: 100%;
-  scroll-snap-align: start;
   position: relative;
-  overflow: hidden;
-}
-
-.hero::before,
-.hero::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  filter: blur(80px);
-  opacity: 0.12;
-  animation: drift 10s ease-in-out infinite alternate;
-  pointer-events: none;
-  z-index: 0;
-}
-
-.hero::before {
-  width: 500px;
-  height: 500px;
-  background: #4ec9b0;
-  top: -100px;
-  right: 10%;
-  animation-duration: 12s;
-}
-
-.hero::after {
-  width: 400px;
-  height: 400px;
-  background: #c792ea;
-  bottom: -80px;
-  left: 5%;
-  animation-duration: 9s;
-  animation-delay: -3s;
+  height: 100vh;
+  overflow-y: auto;
+  scroll-snap-align: start;
 }
 
 @keyframes drift {
@@ -72,7 +42,7 @@
 .hero-name {
   font-size: clamp(40px, 6vw, 68px);
   font-weight: 700;
-  color: #e6edf3;
+  color: var(--color-text); /* this makes "Dorela" dark and strong */
   line-height: 1.1;
   letter-spacing: -1px;
 }
@@ -82,13 +52,13 @@
 .hero-title {
   font-size: clamp(22px, 3.5vw, 40px);
   font-weight: 600;
-  color: #637777;
+  color: var(--color-muted);
   margin-top: 6px;
 }
 .hero-desc {
   margin-top: 24px;
   font-size: 15px;
-  color: #637777;
+  color: var(--color-muted);
   line-height: 1.8;
 }
 .hero-desc .hl {
@@ -136,7 +106,7 @@
   display: flex;
   gap: 6px;
   padding: 10px 14px;
-  background: #21262d;
+  background: var(--bg-card);
 }
 .dot {
   width: 10px;

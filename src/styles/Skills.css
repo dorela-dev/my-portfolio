@@ -1,11 +1,15 @@
 .skills {
-  background: #0d1117;
+  background: var(--bg);
   padding: 60px 80px;
   font-family: "Inter", sans-serif;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative; /* ADD THIS */
+  z-index: 1;
+  height: 100vh;
+  overflow-y: auto;
   scroll-snap-align: start;
 }
 .skills-grid {
@@ -14,7 +18,7 @@
   gap: 24px;
 }
 .skill-group {
-  background: #161b22;
+  background: var(--bg);
   border: 1px solid #21262d;
   border-radius: 8px;
   padding: 24px;
