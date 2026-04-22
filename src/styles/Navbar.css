@@ -8,14 +8,17 @@
   justify-content: space-between;
   padding: 0 48px;
   height: 64px;
-  background: var(--bg-card);
+  background: transparent;
   border-color: var(--border);
   z-index: 100;
   transition: border-color 0.3s;
   font-family: "Fira Code", monospace;
 }
 .navbar.scrolled {
-  border-bottom-color: #30363d;
+  background: rgba(13, 17, 23, 0.6); /* semi-transparent dark */
+  border-bottom-color: rgba(33, 38, 45, 0.8);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px); /* Safari support */
 }
 .nav-logo {
   font-size: 15px;

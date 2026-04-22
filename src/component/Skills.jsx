@@ -34,10 +34,15 @@ const languages = [
 ];
 
 const certs = [
-  { name: "Mendix Rapid Developer", issuer: "Mendix · April 2023" },
+  {
+    name: "Mendix Rapid Developer",
+    issuer: "Mendix · April 2023",
+    link: "/mendix-certificate.pdf",
+  },
   {
     name: "Scrum Master Accredited Certification",
     issuer: "Scrum Institute · October 2025",
+    link: "/scrum-certificate.pdf",
   },
 ];
 
@@ -49,7 +54,7 @@ export default function Skills() {
 
       <div className="skills-grid">
         {skillGroups.map((group) => (
-          <div className="skill-group" key={group.title}>
+          <div className={`skill-group ${group.color}`} key={group.title}>
             <div className={`group-title ${group.color}`}>{group.title}</div>
             <div className="tags">
               {group.skills.map((s) => (
@@ -61,11 +66,11 @@ export default function Skills() {
           </div>
         ))}
 
-        <div className="skill-group span-full">
-          <div className="group-title accent">languages</div>
+        <div className="skill-group span-full pink">
+          <div className="group-title pink">languages</div>
           <div className="tags">
             {languages.map((l) => (
-              <span className="tag accent" key={l.name}>
+              <span className="tag pink" key={l.name}>
                 {l.name} <span className="lang-level">{l.level}</span>
               </span>
             ))}
@@ -76,13 +81,14 @@ export default function Skills() {
       <p className="certs-label">// certifications</p>
       <div className="certs">
         {certs.map((c) => (
-          <div className="cert-card" key={c.name}>
+          <a href={c.link} target="_blank" className="cert-card" key={c.name}>
             <div className="cert-icon">#</div>
             <div>
               <div className="cert-name">{c.name}</div>
               <div className="cert-issuer">{c.issuer}</div>
             </div>
-          </div>
+            <div className="cert-arrow">↗</div>
+          </a>
         ))}
       </div>
     </section>

@@ -33,7 +33,7 @@ export default function Navbar() {
         {links.map((link, i) => (
           <li key={link}>
             <a href={`#${link}`} className={active === link ? "active" : ""}>
-              <span className="num">0{i + 1}.</span>
+              <span className="num">{i}.</span>
               {link}
             </a>
           </li>

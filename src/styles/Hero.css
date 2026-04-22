@@ -2,7 +2,7 @@
 
 .hero {
   min-height: 100vh;
-  background: var(--bg);
+  background: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -10,9 +10,8 @@
   gap: 60px;
   width: 100%;
   position: relative;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
-  scroll-snap-align: start;
 }
 
 @keyframes drift {
