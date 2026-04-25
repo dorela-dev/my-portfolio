@@ -1,9 +1,10 @@
 import { useState } from "react";
-import "../styles/About.css";
+import "./About.css";
+import styles from "./About.module.scss";
 
-import may from "../assets/bookclub/may.png";
-import april from "../assets/bookclub/april.png";
-import march from "../assets/bookclub/march.png";
+import may from "../../assets/bookclub/may.png";
+import april from "../../assets/bookclub/april.png";
+import march from "../../assets/bookclub/march.png";
 
 const stats = [
   { num: "3", label: "years exp." },
@@ -31,7 +32,7 @@ export default function About() {
   const [selected, setSelected] = useState(null);
 
   return (
-    <section className="about" id="about">
+    <section className={styles.about} id="about">
       <p className="section-label">// 01. get to know me</p>
       <h2 className="section-title">about me</h2>
 

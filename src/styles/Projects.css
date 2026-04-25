@@ -7,9 +7,8 @@
   justify-content: center;
   position: relative; /* ADD THIS */
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
-  scroll-snap-align: start;
 }
 .projects-grid {
   display: grid;
@@ -26,6 +25,26 @@
   gap: 16px;
   transition: border-color 0.2s;
   cursor: default;
+  text-decoration: none;
+}
+.proj-top-right {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.proj-arrow {
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: var(--color-muted);
+  transition:
+    color 0.2s,
+    transform 0.2s;
+}
+
+.proj-card:hover .proj-arrow {
+  color: var(--color-accent);
+  transform: translate(2px, -2px);
 }
 .proj-card.accent:hover {
   border-color: #4ec9b0;

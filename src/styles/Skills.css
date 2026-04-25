@@ -1,5 +1,5 @@
 .skills {
-  background: var(--bg);
+  background: transparent;
   padding: 60px 80px;
   font-family: "Inter", sans-serif;
   min-height: 100vh;
@@ -8,9 +8,8 @@
   justify-content: center;
   position: relative; /* ADD THIS */
   z-index: 1;
-  height: 100vh;
+  min-height: 100vh;
   overflow-y: auto;
-  scroll-snap-align: start;
 }
 .skills-grid {
   display: grid;
@@ -22,6 +21,44 @@
   border: 1px solid #21262d;
   border-radius: 8px;
   padding: 24px;
+}
+.skill-group.pink:hover {
+  border-color: #e0b1cb;
+  box-shadow: 0 0 12px rgba(255, 203, 107, 0.4);
+}
+
+.group-title.pink {
+  color: #e0b1cb;
+}
+
+.group-title.pink::before {
+  background: #e0b1cb;
+}
+
+.tag.pink {
+  border-color: #e0b1cb;
+  color: #e0b1cb;
+}
+
+.tag.pink:hover {
+  border-color: #e0b1cb;
+  color: #e0b1cb;
+  box-shadow: 0 0 8px rgba(255, 203, 107, 0.4);
+}
+
+.skill-group.accent:hover {
+  border-color: #4ec9b0;
+  box-shadow: 0 0 12px rgba(78, 201, 176, 0.4);
+}
+
+.skill-group.blue:hover {
+  border-color: #82aaff;
+  box-shadow: 0 0 12px rgba(130, 170, 255, 0.4);
+}
+
+.skill-group.purple:hover {
+  border-color: #c792ea;
+  box-shadow: 0 0 12px rgba(199, 146, 234, 0.4);
 }
 .span-full {
   grid-column: span 3;
@@ -77,8 +114,26 @@
   cursor: default;
 }
 .tag:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 0 8px rgba(78, 201, 176, 0.4);
+}
+
+.tag.accent:hover {
   border-color: #4ec9b0;
   color: #4ec9b0;
+  box-shadow: 0 0 16px rgba(78, 201, 176, 0.4);
+}
+
+.tag.blue:hover {
+  border-color: #82aaff;
+  color: #82aaff;
+  box-shadow: 0 0 8px rgba(130, 170, 255, 0.4);
+}
+
+.tag.purple:hover {
+  border-color: #c792ea;
+  color: #c792ea;
+  box-shadow: 0 0 8px rgba(199, 146, 234, 0.4);
 }
 .tag.accent {
   border-color: #4ec9b0;
@@ -110,13 +165,32 @@
   gap: 16px;
 }
 .cert-card {
-  background: #161b22;
-  border: 1px solid #21262d;
+  background: var(--bg-card);
+  border: 1px solid var(--border);
   border-radius: 8px;
   padding: 20px;
   display: flex;
   gap: 14px;
-  align-items: flex-start;
+  align-items: center;
+  text-decoration: none; /* ADD */
+  transition: border-color 0.2s; /* ADD */
+  cursor: pointer; /* ADD */
+}
+
+.cert-card:hover {
+  border-color: var(--color-accent);
+}
+
+.cert-arrow {
+  font-family: "Fira Code", monospace;
+  font-size: 16px;
+  color: var(--color-muted);
+  margin-left: auto;
+  transition: color 0.2s;
+}
+
+.cert-card:hover .cert-arrow {
+  color: var(--color-accent);
 }
 .cert-icon {
   font-family: "Fira Code", monospace;
