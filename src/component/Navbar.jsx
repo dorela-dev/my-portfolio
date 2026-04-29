@@ -40,9 +40,9 @@ export default function Navbar() {
         ))}
       </ul>
       <div className="nav-right">
-        <button className="theme-toggle" onClick={toggle} title="toggle theme">
+        {/* <button className="theme-toggle" onClick={toggle} title="toggle theme">
           {theme === "dark" ? "[ light_mode ]" : "[ dark_mode ]"}
-        </button>
+        </button> */}
         <a href="/resume.pdf" target="_blank" className="nav-resume">
           resume.pdf
         </a>

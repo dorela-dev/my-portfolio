@@ -7,6 +7,7 @@ import Skills from "./component/Skills";
 import Experience from "./component/Experience";
 import Projects from "./component/Projects";
 import Contact from "./component/Contact";
+import "./styles/App.css";
 
 export default function App() {
   const [loaded, setLoaded] = useState(false);
@@ -15,6 +16,11 @@ export default function App() {
 
   return (
     <>
+      <div className="background">
+        <div className="orb orbA" />
+        <div className="orb orbB" />
+      </div>
+
       <Navbar />
       <Hero />
       <About />

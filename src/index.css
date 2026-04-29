@@ -19,10 +19,11 @@
   --color-muted: #637777;
   --color-subtle: #8b949e;
   --border: #21262d;
+
   --orb1: #4ec9b0;
   --orb2: #c792ea;
-  --orb1-opacity: 0.15;
-  --orb2-opacity: 0.12;
+  --orb1-opacity: 0.5;
+  --orb2-opacity: 0.4;
 }
 
 /* LIGHT MODE */
@@ -37,6 +38,7 @@
   --color-muted: #7293a0;
   --color-subtle: #a0a4b8;
   --border: #d8ddef;
+
   --orb1: #21d19f;
   --orb2: #45b69c;
   --orb1-opacity: 0.3;
@@ -65,81 +67,6 @@ body {
 }
 
 #root {
-  background: transparent;
   position: relative;
-  z-index: 0;
-}
-
-#root::before,
-#root::after {
-  content: "";
-  position: fixed;
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 0;
-  will-change: transform, opacity;
-}
-
-#root::before {
-  width: 800px;
-  height: 800px;
-  background: radial-gradient(circle, var(--orb1) 0%, transparent 70%);
-  top: -300px;
-  right: -200px;
-  opacity: var(--orb1-opacity);
-  filter: blur(100px);
-  animation:
-    breatheA 16s ease-in-out infinite,
-    glowA 3s ease-in-out infinite;
-}
-
-#root::after {
-  width: 700px;
-  height: 700px;
-  background: radial-gradient(circle, var(--orb2) 0%, transparent 70%);
-  bottom: -250px;
-  left: -150px;
-  opacity: var(--orb2-opacity);
-  filter: blur(100px);
-  animation:
-    breatheB 20s ease-in-out infinite,
-    glowB 4s ease-in-out infinite;
-}
-
-@keyframes breatheA {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-    opacity: var(--orb1-opacity);
-  }
-  33% {
-    transform: translate(30px, 20px) scale(1.08);
-    opacity: 0.18;
-  }
-  66% {
-    transform: translate(-20px, 30px) scale(0.95);
-    opacity: var(--orb1-opacity);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-    opacity: var(--orb1-opacity);
-  }
-}
-
-@keyframes breatheB {
-  0% {
-    transform: translate(0px, 0px) scale(1);
-    opacity: var(--orb2-opacity);
-  }
-  33% {
-    transform: translate(-30px, -20px) scale(1.1);
-    opacity: 0.15;
-  }
-  66% {
-    transform: translate(20px, -30px) scale(0.92);
-    opacity: var(--orb2-opacity);
-  }
-  100% {
-    transform: translate(0px, 0px) scale(1);
-    opacity: var(--orb2-opacity);
-  }
+  z-index: 10;
 }

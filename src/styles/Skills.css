@@ -17,14 +17,13 @@
   gap: 24px;
 }
 .skill-group {
-  background: var(--bg);
+  background: var(--bg-card);
   border: 1px solid #21262d;
   border-radius: 8px;
   padding: 24px;
 }
 .skill-group.pink:hover {
   border-color: #e0b1cb;
-  box-shadow: 0 0 12px rgba(255, 203, 107, 0.4);
 }
 
 .group-title.pink {
@@ -48,17 +47,14 @@
 
 .skill-group.accent:hover {
   border-color: #4ec9b0;
-  box-shadow: 0 0 12px rgba(78, 201, 176, 0.4);
 }
 
 .skill-group.blue:hover {
   border-color: #82aaff;
-  box-shadow: 0 0 12px rgba(130, 170, 255, 0.4);
 }
 
 .skill-group.purple:hover {
   border-color: #c792ea;
-  box-shadow: 0 0 12px rgba(199, 146, 234, 0.4);
 }
 .span-full {
   grid-column: span 3;
@@ -115,25 +111,21 @@
 }
 .tag:hover {
   border-color: var(--color-accent);
-  box-shadow: 0 0 8px rgba(78, 201, 176, 0.4);
 }
 
 .tag.accent:hover {
   border-color: #4ec9b0;
   color: #4ec9b0;
-  box-shadow: 0 0 16px rgba(78, 201, 176, 0.4);
 }
 
 .tag.blue:hover {
   border-color: #82aaff;
   color: #82aaff;
-  box-shadow: 0 0 8px rgba(130, 170, 255, 0.4);
 }
 
 .tag.purple:hover {
   border-color: #c792ea;
   color: #c792ea;
-  box-shadow: 0 0 8px rgba(199, 146, 234, 0.4);
 }
 .tag.accent {
   border-color: #4ec9b0;
