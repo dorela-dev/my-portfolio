@@ -83,11 +83,23 @@
 .contact-form input:focus,
 .contact-form textarea:focus {
   border-color: #4ec9b0;
+  background: #161b22;
+}
+.contact-form input:-webkit-autofill,
+.contact-form textarea:-webkit-autofill,
+.contact-form input:-webkit-autofill:focus,
+.contact-form textarea:-webkit-autofill:focus {
+  background-color: #161b22 !important;
+  box-shadow: 0 0 0px 1000px #161b22 inset !important;
+  -webkit-text-fill-color: #e6edf3 !important;
+  transition: background-color 5000s ease-in-out 0s !important;
 }
 .contact-form textarea {
   resize: none;
 }
 .form-btn {
+  position: relative;
+  overflow: hidden;
   font-family: "Fira Code", monospace;
   font-size: 13px;
   color: #4ec9b0;
@@ -97,8 +109,45 @@
   background: transparent;
   cursor: pointer;
   align-self: flex-start;
-  transition: background 0.2s;
+  transition: background-color 0.3s ease;
 }
-.form-btn:hover {
-  background: rgba(78, 201, 176, 0.1);
+
+.form-actions {
+  display: flex;
+  align-items: center;
+  gap: 400px;
+}
+
+.submit-message {
+  margin-top: 0;
+  font-size: 14px;
+  opacity: 0;
+  animation: fadeOutRight 3.5s ease forwards;
+}
+
+.submit-message.success {
+  color: #4ec9b0;
+}
+
+.submit-message.error {
+  color: #f47067;
+}
+
+@keyframes fadeOutRight {
+  0% {
+    opacity: 0;
+    transform: translateX(-8px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(8px);
+  }
 }
